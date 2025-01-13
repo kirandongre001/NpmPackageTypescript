@@ -1,0 +1,100 @@
+.form-control-label {
+    @apply block w-full px-2 text-sm font-semibold text-neutral-400;
+  }
+  .form-control-input {
+    @apply w-full min-h-[32px] text-neutral-900 dark:text-neutral-50 focus:outline-none ;
+  }
+  
+  .form-control-outlined{
+    @apply border-2 bg-transparent border-neutral-200 dark:border-neutral-500/50
+  }
+  
+  .control-group:has(input:focus) .form-control-outlined,
+  .control-group:has(textarea:focus) .form-control-outlined{
+    @apply border-blue-500 dark:border-blue-500
+  }
+  
+  .form-control-filled{
+    @apply bg-neutral-100 dark:bg-neutral-800 border-b-2 border-neutral-100 dark:border-neutral-800
+  }
+  
+  .control-group:has(input:focus) .form-control-filled,
+  .control-group:has(textarea:focus) .form-control-filled{
+    @apply border-blue-500 dark:border-blue-500 rounded-b-none
+  }
+  
+  .form-control-default{
+    @apply border-b-2 bg-transparent
+  }
+  
+  .control-group:has(input:focus) .form-control-default,
+  .control-group:has(textarea:focus) .form-control-default{
+    @apply border-blue-500 dark:border-blue-500
+  }
+  
+  .form-control-rounded {
+    @apply rounded-lg
+  }
+  
+  .form-control-rounded-circle {
+    @apply rounded-full
+  }
+  
+  .form-control-select {
+    @apply appearance-none w-full px-2 rounded-full outline-none ring-1 ring-c-indigo-100 drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400;
+  }
+  
+  .form-control-border {
+    @apply border-b border-b-blue-300 dark:border-b-neutral-400 focus:border focus:bg-blue-50 focus:rounded-lg 
+    focus:border-blue-400 dark:focus:border dark:focus:bg-opacity-20 dark:focus:bg-blue-300 dark:focus:rounded-lg 
+    dark:focus:border-blue-300;
+  }
+  
+  .form-control-input:-webkit-autofill,
+  .form-control-input:-webkit-autofill:hover,
+  .form-control-input:-webkit-autofill:focus,
+  .form-control-input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+  }
+  
+  .floating-label-group {
+    padding-top: 10px;
+    @apply relative mt-2
+  }
+  
+  .floating-label-group .floating-label {
+    /* color: rgba(82, 82, 82, 1); */
+    position: absolute;
+    pointer-events: none;
+    top: 15px;
+    left: 5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    @apply text-base text-neutral-400
+  }
+  
+  .floating-label-group input:focus ~ .floating-label,
+  .floating-label-group input:not(:placeholder-shown) ~ .floating-label,
+  .floating-label-group textarea:focus ~ .floating-label,
+  .floating-label-group textarea:not(:placeholder-shown) ~ .floating-label {
+    top: -10px;
+    left: 6px;
+    opacity: 1;
+    @apply text-sm
+  }
+  
+  .control-group:has(input:focus) .form-control-label,
+  .control-group:has(input:focus) .floating-label,
+  .control-group:has(textarea:focus) .form-control-label,
+  .control-group:has(textarea:focus) .floating-label{
+    @apply text-blue-500
+  }
+  
+  .form-control-error {
+    @apply border-red-400 dark:border-red-400;
+  }
+  .form-control-border-error {
+    @apply border-b-red-400 dark:border-b-red-400;
+  }
+  
